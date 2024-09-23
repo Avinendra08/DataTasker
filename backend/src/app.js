@@ -11,8 +11,10 @@ app.use(cookieParser())
 
 //routes import
 //import farmerRouter from './routes/farmer.route.js'
+import approuter from './routes/route.js';
 
 //routes declaration
 //app.use("/api/farmer/",farmerRouter)
+app.use("/",approuter);
 
 export { app }
