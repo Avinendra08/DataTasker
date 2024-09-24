@@ -6,16 +6,16 @@ export const getAllContacts = asyncHandler(async (req, res) => {
     res.status(200).json({success:true,data:contacts});
 });
 
-export const getContactById = asyncHandler(async(req,res)=>{
-    const contactId = parseInt(req.params.id,10);
-    const contact = contacts.find(contact=> contact.id===contactId);
+// export const getContactById = asyncHandler(async(req,res)=>{
+//     const contactId = parseInt(req.params.id,10);
+//     const contact = contacts.find(contact=> contact.id===contactId);
 
-    if(contact){
-        res.status(200).json({success:true,data:contact});
-    }else{
-        res.status(400).json({success:false,message:"contact not found"});
-    }
-});
+//     if(contact){
+//         res.status(200).json({success:true,data:contact});
+//     }else{
+//         res.status(400).json({success:false,message:"contact not found"});
+//     }
+// });
 
 export const saveMessage = asyncHandler(async(req,res)=>{
     const contactId = parseInt(req.params.id,10);
